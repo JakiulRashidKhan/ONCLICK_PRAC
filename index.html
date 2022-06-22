@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- step-1:
+    use in HTML Tag -->
+    <button onclick="document.body.style.backgroundColor ='green'">Green</button>
+
+    <!-- step-2:
+    call function inside HTML tag -->
+    <button onclick="makeRed()">Red</button>
+
+    <!-- step-3:
+    calling id and  calling funtion name  then make function -->
+    <button id="make-yellow">Yellow</button>
+
+    <!-- step-4:
+    calling id and make function in same line -->
+    <button id="make-blue">Blue</button>
+
+    <!-- step-5:
+    using calling id and addEventListener -->
+    <button id="hot-pink">Hot Pink</button>
+
+    <!-- step-6:
+    using function and eventlistener in same line -->
+    <button id="golden-rod">GoldenRod</button>
+
+    <!-- step-7:
+     function and eventlistener in same line -->
+     <button id="black">Black</button>
+
+    <!-- step-2:
+    call function inside HTML tag -->
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor ='red';
+        }
+    </script>
+
+    <!-- step-3:
+    calling id and  calling funtion name  then make function -->
+    <script>
+        const makeYellowColor = document.getElementById('make-yellow');
+        makeYellowColor.onclick =makeYellow;
+
+        function makeYellow(){
+            document.body.style.backgroundColor ='yellow';
+        }
+    </script>
+
+    <!-- step-4:
+    calling id and make function in same line -->
+    <script>
+        const makeBlueColor = document.getElementById('make-blue');
+        makeBlueColor.onclick = function makeBlue(){
+            document.body.style.backgroundColor ='blue';
+        }
+    </script>
+
+    <!-- step-5:
+    using calling id and addEventListener -->
+    <script>
+        const makeHot = document.getElementById('hot-pink');
+        makeHot.addEventListener('click',makePink);
+
+        function makePink(){
+            document.body.style.backgroundColor ='hotpink'; 
+        }
+    </script>
+
+    <!-- step-6:
+    using function and eventlistener in same line -->
+    <script>
+        const makeGold = document.getElementById('golden-rod');
+        makeGold.addEventListener('click',function (){
+            document.body.style.backgroundColor ='goldenrod'; 
+        });
+    </script>
+
+    <!-- step-7:
+    function and eventlistener in same line -->
+
+    <script>
+        const makeBlack = document.getElementById('black').addEventListener('click',function (){
+            document.body.style.backgroundColor ='black'; 
+        });
+    </script>
+</body>
+</html> 
